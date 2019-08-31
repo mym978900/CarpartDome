@@ -1,6 +1,5 @@
 package com.xiupeilian.carpart.base;
 
-
 /**
  * @Description:
  * @Author: Tu Xu
@@ -8,7 +7,7 @@ package com.xiupeilian.carpart.base;
  * @Version: 1.0
  **/
 public interface BaseMapper<T> {
-    //第二次修改.
+    //第6次修改.
     int deleteByPrimaryKey(Integer id);
 
     int insert(T record);
