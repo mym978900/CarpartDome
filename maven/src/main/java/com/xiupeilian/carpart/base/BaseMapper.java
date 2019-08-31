@@ -8,7 +8,7 @@ package com.xiupeilian.carpart.base;
  * @Version: 1.0
  **/
 public interface BaseMapper<T> {
-    //第一次修改
+    //第一次修改.
     int deleteByPrimaryKey(Integer id);
 
     int insert(T record);
