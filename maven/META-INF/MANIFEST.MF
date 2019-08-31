@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: maven
+Bundle-SymbolicName: maven
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.oracle.ssm.controller,
+ com.oracle.ssm.mapper,
+ com.oracle.ssm.model,
+ com.oracle.ssm.service,
+ com.oracle.ssm.service.impl,
+ com.oracle.ssm.vo
