@@ -45,7 +45,7 @@
                       <li class="name">输入员工姓名</li>
                       <li ><input type="text" name="findName" id="username" class="cha1"  value="${username}"/></li>
                       <li ><input class="button" type="submit" name="button" id="button" value="查找"  style="cursor:pointer;"/></li>
-                      <li onclick="addStaff();" ><input class="button2" type="button" name="button" id="button" value="新增用户"  style="cursor:pointer;"/></li>
+                      <li onclick="addStaff();" > <a href="${ctx}/staff/addStaff"> <input class="button2" type="button" name="button" id="button" value="新增用户"  style="cursor:pointer;"/></a></li>
                     </ul>
                     </form>
                 </div><!--输入用户名-->

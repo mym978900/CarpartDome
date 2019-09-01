@@ -32,4 +32,14 @@ public class StaffController {
         request.setAttribute("username",vo.getFindName());
         return "index/staffList";
     }
+    /**
+     * @Description: 添加员工
+     * @Author:      孟
+     * @Param:
+     * @Return
+      **/
+    @RequestMapping("/addStaff")
+    public String addStaff(HttpServletResponse response, HttpServletRequest request) throws Exception {
+        return "staff/addStaff";
+    }
 }
