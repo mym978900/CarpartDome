@@ -30,7 +30,7 @@ public class UpLoadControllter {
 	}
 
 	@RequestMapping(value = "photoupload", method = {RequestMethod.POST, RequestMethod.GET})
-	public void myphotoupload(HttpServletRequest request, @RequestParam("file") MultipartFile file, HttpServletResponse response) throws IOException {
+	public String myphotoupload(HttpServletRequest request, @RequestParam("file") MultipartFile file, HttpServletResponse response) throws IOException {
 		CommonsMultipartFile cf = (CommonsMultipartFile) file;
 		DiskFileItem fi = (DiskFileItem) cf.getFileItem();
 		File f = fi.getStoreLocation();
@@ -39,9 +39,10 @@ public class UpLoadControllter {
 		System.out.println(AliyunOSSClientUtil.getUrl((SysConstant.FOLDER+f.getName())));
 		//System.out.println("图片的访问地址"+"https://"+SysConstant.BACKET_NAME+"."+SysConstant.ENDPOINT+"/"+SysConstant.FOLDER+f.getName());
 		String imgUrl="https://"+SysConstant.BACKET_NAME+"."+SysConstant.ENDPOINT+"/"+SysConstant.FOLDER+f.getName();
-		response.getWriter().write(imgUrl);
+		//response.getWriter().write(imgUrl);
+		request.setAttribute("imgUrl",imgUrl);
 		System.out.println(imgUrl);
-
+		return "private/addCommodity";
 	}
 
 

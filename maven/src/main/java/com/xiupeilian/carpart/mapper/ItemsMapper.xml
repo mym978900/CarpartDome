@@ -229,4 +229,8 @@
     </where>
     order by update_time desc
   </select>
+  <select id="findItemsByUserId" parameterType="int" resultMap="BaseResultMap">
+    select * from items where user_id =#{id} and delete_status =0
+
+  </select>
 </mapper>
